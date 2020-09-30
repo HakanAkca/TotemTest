@@ -7,7 +7,7 @@ export default ({ items, onEndReached, navigation }) => (
   <FlatList
     data={items}
     renderItem={({ item }) => <ListItem item={item} navigation={navigation} />}
-    keyExtractor={item => item.id}
+    keyExtractor={(item, index) => index}
     ItemSeparatorComponent={() => <Separator />}
     onEndReached={onEndReached}
     ListEmptyComponent={() => {
